@@ -1,65 +1,114 @@
-# React + TypeScript + Vite
+# Tank Battle 3D Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[**Demo Game**](https://tank-battle-threejs.netlify.app/)
 
-Currently, two official plugins are available:
+## **Overview**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Tank Battle 3D Game** adalah sebuah game browser 3D yang dibangun menggunakan **React** dan **Three.js**. Pemain dapat mengendalikan tank untuk bertempur dalam lingkungan 3D yang dirancang khusus. Game ini mendukung **multiplayer hingga 4 pemain**, cocok untuk permainan kompetitif.
 
-## Expanding the ESLint configuration
+Game ini memiliki sistem **kill-death ranking**, di mana performa pemain menentukan posisi mereka di leaderboard. Minimal 2 pemain diperlukan untuk pengalaman penuh; jika bermain sendiri, pemain hanya dapat menjelajahi map tanpa lawan.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## **Features**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+### 1. **3D Tank Control**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Kontrol realistis dengan mekanik fisika dinamis.
+- Menggunakan keyboard dan mouse untuk navigasi dan menembak.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+### 2. **Multiplayer Support**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
-```
+- Bermain bersama hingga 4 pemain secara real-time.
+- Didukung oleh **Playroomkit** untuk sinkronisasi multiplayer.
+- Minimal 2 pemain diperlukan untuk gameplay kompetitif.
 
+### 3. **Kill-Death Ranking System**
 
- "@react-three/drei": "^9.111.3",
-    "@react-three/fiber": "^8.17.6",
-    "@react-three/postprocessing": "^2.16.3",
-    "@react-three/rapier": "^1.5.0",
-    "leva": "^0.9.35",
-    "playroomkit": "^0.0.83",
-    "react": "^18.3.1",
-    "react-countdown": "^2.3.6",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.0.1",
-    "three": "^0.167.1"
+- **Game log** mencatat jumlah kill dan death setiap pemain.
+- Leaderboard diupdate secara real-time berdasarkan rasio kill-death.
 
- 
+### 4. **Custom Map Design**
+
+- Map dirancang menggunakan **Blender**.
+- Menggunakan aset berkualitas tinggi dari:
+  - [**Animated Tanks Pack**](https://quaternius.com/packs/animatedtanks.html)
+  - [**Simple Nature Pack**](https://quaternius.com/packs/simplenature.html)
+
+### 5. **Immersive Game Mechanics**
+
+- Mekanik menembak dengan lintasan peluru realistis.
+- Sistem skor terintegrasi dengan countdown timer.
+- Efek visual seperti ledakan dan pasca-pemrosesan untuk tank yang hancur.
+
+### 6. **Responsive UI**
+
+- Antarmuka ramah pengguna dengan petunjuk di dalam game.
+- Menampilkan countdown, skor, dan leaderboard.
+- **Catatan:** Beberapa elemen UI belum sepenuhnya responsif, terutama di perangkat dengan layar kecil.
+
+---
+
+## **Technologies Used**
+
+### **1. Core Libraries**
+
+- **[React](https://reactjs.org/):** Framework untuk membangun antarmuka pengguna.
+- **[Three.js](https://threejs.org/):** Engine 3D untuk rendering dunia game.
+
+### **2. React Three Utilities**
+
+- **[@react-three/fiber](https://github.com/pmndrs/react-three-fiber):** React renderer untuk Three.js.
+- **[@react-three/drei](https://github.com/pmndrs/drei):** Utilities untuk kontrol kamera, lingkungan, dan pencahayaan.
+- **[@react-three/rapier](https://rapier.rs/):** Simulasi fisika untuk gerakan tank dan peluru.
+- **[@react-three/postprocessing](https://github.com/pmndrs/postprocessing):** Menambahkan efek visual seperti bloom dan depth of field.
+
+### **3. Multiplayer Support**
+
+- **[Playroomkit](https://github.com/playroomkit):** Library untuk sinkronisasi real-time dalam multiplayer.
+
+### **4. Additional Libraries**
+
+- **[Leva](https://github.com/pmndrs/leva):** Panel kontrol interaktif untuk menyesuaikan parameter real-time.
+- **[React Countdown](https://github.com/ndresx/react-countdown):** Timer untuk sesi permainan.
+- **[React Router DOM](https://reactrouter.com/):** Routing untuk halaman seperti Home, Gameplay, dan Instructions.
+
+---
+
+## **Development Highlights**
+
+### Multiplayer Emphasis
+
+Game mendukung hingga 4 pemain dengan sinkronisasi real-time menggunakan **Playroomkit**. Minimal 2 pemain diperlukan untuk gameplay kompetitif.
+
+### Kill-Death Ranking System
+
+Sistem ini memantau performa pemain, mencatat jumlah kill dan death, serta mengupdate leaderboard secara real-time.
+
+### Custom Map Design
+
+Map dirancang menggunakan **Blender** dan memanfaatkan aset dari [Quaternius](https://quaternius.com/).
+
+### Realistic Game Mechanics
+
+Mekanik menembak, ledakan, dan gerakan tank dirancang dengan fisika yang akurat menggunakan **Rapier**.
+
+### Optimized Rendering
+
+Rendering yang efisien menggunakan kombinasi **React Three Fiber** dan utilities dari Drei.
+
+---
+
+## **Current Limitations**
+
+- **Responsiveness:** Beberapa elemen UI belum sepenuhnya responsif di perangkat kecil.
+- **Performance Optimization:** Perlu pengoptimalan lebih lanjut untuk perangkat dengan spesifikasi rendah.
+- **Feature Expansion:** Potensi penambahan fitur seperti kustomisasi tank atau map tambahan untuk variasi gameplay.
+
+---
+
+## **Conclusion**
+
+Tank Battle 3D Game menawarkan pengalaman multiplayer kompetitif yang menarik dengan desain map khusus dan mekanik realistis. Namun, beberapa aspek seperti **responsiveness**, **optimasi performa**, dan **pengembangan fitur baru** perlu ditingkatkan untuk mencapai potensi penuh game ini.
+
+---

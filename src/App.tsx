@@ -1,7 +1,7 @@
 import { Loader, PerformanceMonitor, SoftShadows } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Physics } from '@react-three/rapier';
-import { Leva } from 'leva';
+// import { Leva } from 'leva';
 import { Suspense, useState } from 'react';
 
 import { Experience } from './components/Experience';
@@ -18,9 +18,8 @@ function App() {
   return (
     <>
       <Loader />
-      <Leva />
-      {/* <Leaderboard />
-      <HowToPlay /> */}
+      {/* <Leva /> */}
+
       <Header />
 
       <GameOver />
