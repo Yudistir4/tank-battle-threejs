@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  // "compilerOptions": {
+  //   "target": "ESNext",
+  //   "module": "ESNext",
+  //   "strict": true,
+  //   "incremental": true, // Aktifkan incremental build
+  //   "tsBuildInfoFile": "./build/tsconfig.tsbuildinfo" // Lokasi file .tsbuildinfo
+  // }
+}
