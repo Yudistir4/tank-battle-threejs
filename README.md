@@ -1,12 +1,12 @@
 # Tank Battle 3D Game
 
-[**Demo Game**](https://tank-battle-threejs.netlify.app/)
+[**Game Demo**](https://tank-battle-threejs.netlify.app/)
 
 ## **Overview**
 
-**Tank Battle 3D Game** adalah sebuah game browser 3D yang dibangun menggunakan **React** dan **Three.js**. Pemain dapat mengendalikan tank untuk bertempur dalam lingkungan 3D yang dirancang khusus. Game ini mendukung **multiplayer hingga 4 pemain**, cocok untuk permainan kompetitif.
+**Tank Battle 3D Game** is a browser-based 3D game built with **React** and **Three.js**. Players can control tanks and engage in battles within a custom-designed 3D environment. The game supports **multiplayer for up to 4 players**, making it ideal for competitive gameplay.
 
-Game ini memiliki sistem **kill-death ranking**, di mana performa pemain menentukan posisi mereka di leaderboard. Minimal 2 pemain diperlukan untuk pengalaman penuh; jika bermain sendiri, pemain hanya dapat menjelajahi map tanpa lawan.
+The game features a **kill-death ranking system**, where player performance determines their leaderboard position. A minimum of 2 players is required for the full experience; if played solo, the game will only allow exploration of the map without enemies.
 
 ---
 
@@ -14,38 +14,38 @@ Game ini memiliki sistem **kill-death ranking**, di mana performa pemain menentu
 
 ### 1. **3D Tank Control**
 
-- Kontrol realistis dengan mekanik fisika dinamis.
-- Menggunakan keyboard dan mouse untuk navigasi dan menembak.
+- Realistic controls with dynamic physics mechanics.
+- Use keyboard and mouse for navigation and shooting.
 
 ### 2. **Multiplayer Support**
 
-- Bermain bersama hingga 4 pemain secara real-time.
-- Didukung oleh **Playroomkit** untuk sinkronisasi multiplayer.
-- Minimal 2 pemain diperlukan untuk gameplay kompetitif.
+- Play with up to 4 players in real time.
+- Powered by **Playroomkit** for multiplayer synchronization.
+- A minimum of 2 players is required for competitive gameplay.
 
 ### 3. **Kill-Death Ranking System**
 
-- **Game log** mencatat jumlah kill dan death setiap pemain.
-- Leaderboard diupdate secara real-time berdasarkan rasio kill-death.
+- **Game log** tracks the number of kills and deaths for each player.
+- The leaderboard updates in real time based on the kill-death ratio.
 
 ### 4. **Custom Map Design**
 
-- Map dirancang menggunakan **Blender**.
-- Menggunakan aset berkualitas tinggi dari:
+- Maps are designed using **Blender**.
+- Utilizes high-quality assets from:
   - [**Animated Tanks Pack**](https://quaternius.com/packs/animatedtanks.html)
   - [**Simple Nature Pack**](https://quaternius.com/packs/simplenature.html)
 
 ### 5. **Immersive Game Mechanics**
 
-- Mekanik menembak dengan lintasan peluru realistis.
-- Sistem skor terintegrasi dengan countdown timer.
-- Efek visual seperti ledakan dan pasca-pemrosesan untuk tank yang hancur.
+- Shooting mechanics with realistic bullet trajectories.
+- Integrated scoring system with a countdown timer.
+- Visual effects like explosions and post-processing for destroyed tanks.
 
 ### 6. **Responsive UI**
 
-- Antarmuka ramah pengguna dengan petunjuk di dalam game.
-- Menampilkan countdown, skor, dan leaderboard.
-- **Catatan:** Beberapa elemen UI belum sepenuhnya responsif, terutama di perangkat dengan layar kecil.
+- User-friendly interface with in-game instructions.
+- Displays countdown, scores, and leaderboard.
+- **Note:** Some UI elements are not fully responsive, especially on smaller screens.
 
 ---
 
@@ -53,25 +53,25 @@ Game ini memiliki sistem **kill-death ranking**, di mana performa pemain menentu
 
 ### **1. Core Libraries**
 
-- **[React](https://reactjs.org/):** Framework untuk membangun antarmuka pengguna.
-- **[Three.js](https://threejs.org/):** Engine 3D untuk rendering dunia game.
+- **[React](https://reactjs.org/):** Framework for building user interfaces.
+- **[Three.js](https://threejs.org/):** 3D engine for rendering the game world.
 
 ### **2. React Three Utilities**
 
-- **[@react-three/fiber](https://github.com/pmndrs/react-three-fiber):** React renderer untuk Three.js.
-- **[@react-three/drei](https://github.com/pmndrs/drei):** Utilities untuk kontrol kamera, lingkungan, dan pencahayaan.
-- **[@react-three/rapier](https://rapier.rs/):** Simulasi fisika untuk gerakan tank dan peluru.
-- **[@react-three/postprocessing](https://github.com/pmndrs/postprocessing):** Menambahkan efek visual seperti bloom dan depth of field.
+- **[@react-three/fiber](https://github.com/pmndrs/react-three-fiber):** React renderer for Three.js.
+- **[@react-three/drei](https://github.com/pmndrs/drei):** Utilities for camera controls, environment, and lighting.
+- **[@react-three/rapier](https://rapier.rs/):** Physics simulation for tank and bullet movement.
+- **[@react-three/postprocessing](https://github.com/pmndrs/postprocessing):** Adds visual effects like bloom and depth of field.
 
 ### **3. Multiplayer Support**
 
-- **[Playroomkit](https://github.com/playroomkit):** Library untuk sinkronisasi real-time dalam multiplayer.
+- **[Playroomkit](https://github.com/playroomkit):** Library for real-time synchronization in multiplayer games.
 
 ### **4. Additional Libraries**
 
-- **[Leva](https://github.com/pmndrs/leva):** Panel kontrol interaktif untuk menyesuaikan parameter real-time.
-- **[React Countdown](https://github.com/ndresx/react-countdown):** Timer untuk sesi permainan.
-- **[React Router DOM](https://reactrouter.com/):** Routing untuk halaman seperti Home, Gameplay, dan Instructions.
+- **[Leva](https://github.com/pmndrs/leva):** Interactive control panel for adjusting parameters in real time.
+- **[React Countdown](https://github.com/ndresx/react-countdown):** Timer for game sessions.
+- **[React Router DOM](https://reactrouter.com/):** Routing for pages like Home, Gameplay, and Instructions.
 
 ---
 
@@ -79,36 +79,36 @@ Game ini memiliki sistem **kill-death ranking**, di mana performa pemain menentu
 
 ### Multiplayer Emphasis
 
-Game mendukung hingga 4 pemain dengan sinkronisasi real-time menggunakan **Playroomkit**. Minimal 2 pemain diperlukan untuk gameplay kompetitif.
+The game supports up to 4 players with real-time synchronization using **Playroomkit**. A minimum of 2 players is required for competitive gameplay.
 
 ### Kill-Death Ranking System
 
-Sistem ini memantau performa pemain, mencatat jumlah kill dan death, serta mengupdate leaderboard secara real-time.
+This system monitors player performance, tracking kills and deaths, and updating the leaderboard in real time.
 
 ### Custom Map Design
 
-Map dirancang menggunakan **Blender** dan memanfaatkan aset dari [Quaternius](https://quaternius.com/).
+Maps are crafted using **Blender** and utilize assets from [Quaternius](https://quaternius.com/).
 
 ### Realistic Game Mechanics
 
-Mekanik menembak, ledakan, dan gerakan tank dirancang dengan fisika yang akurat menggunakan **Rapier**.
+Shooting, explosions, and tank movements are designed with accurate physics using **Rapier**.
 
 ### Optimized Rendering
 
-Rendering yang efisien menggunakan kombinasi **React Three Fiber** dan utilities dari Drei.
+Efficient rendering is achieved using **React Three Fiber** and utilities from Drei.
 
 ---
 
 ## **Current Limitations**
 
-- **Responsiveness:** Beberapa elemen UI belum sepenuhnya responsif di perangkat kecil.
-- **Performance Optimization:** Perlu pengoptimalan lebih lanjut untuk perangkat dengan spesifikasi rendah.
-- **Feature Expansion:** Potensi penambahan fitur seperti kustomisasi tank atau map tambahan untuk variasi gameplay.
+- **Responsiveness:** Some UI elements are not fully responsive on smaller devices.
+- **Performance Optimization:** Further optimization is needed for devices with lower specifications.
+- **Feature Expansion:** Potential to add features like tank customization or additional maps for more varied gameplay.
 
 ---
 
 ## **Conclusion**
 
-Tank Battle 3D Game menawarkan pengalaman multiplayer kompetitif yang menarik dengan desain map khusus dan mekanik realistis. Namun, beberapa aspek seperti **responsiveness**, **optimasi performa**, dan **pengembangan fitur baru** perlu ditingkatkan untuk mencapai potensi penuh game ini.
+Tank Battle 3D Game offers an engaging multiplayer experience with competitive gameplay, custom-designed maps, and realistic mechanics. However, aspects like **responsiveness**, **performance optimization**, and **new feature development** need improvement to realize the game’s full potential.
 
 ---
